@@ -2,7 +2,8 @@
   background-color: transparent !important;
 }
 .hhFJlm,
-.evumGo {
+.evumGo,
+.hdoSbV {
   /* background-color: #161522 !important; */
   background-color: #fff !important;
   color: #000 !important;
@@ -59,13 +60,19 @@
 }
 .eSvlCC,
 .gcuAnX,
-.fUsIex {
+.VUrNH,
+.fUsIex,
+.idQpxt {
   color: #000 !important;
   background-color: #e5e7e7 !important;
 }
+
 .JTniw,
 .bsLwMN {
   background-color: transparent !important;
+}
+.hCNSTz {
+  width: 100% !important;
 }
 .JTniw,
 .bsLwMN {
@@ -129,26 +136,26 @@
   .dMyrsm {
     background-color: #171798 !important ;
   }
-  .kChkRq {
+  /* .kChkRq {
     background-color: #171798 !important;
-  }
+  } */
 }
 
 @media (max-width: 480px) {
   .dMyrsm {
     background-color: #171798 !important;
   }
-  .kChkRq {
+  /* .kChkRq {
     background-color: #171798 !important;
-  }
+  } */
 }
 @media (max-width: 768px) {
   .dMyrsm {
     background-color: #171798 !important;
   }
-  .kChkRq {
+  /* .kChkRq {
     background-color: #171798 !important;
-  }
+  } */
 }
 .dnbNHl,
 .imefRD {
@@ -175,7 +182,8 @@
   opacity: 1 !important;
 }
 .jzgrgs,
-.gudCje {
+.gudCje,
+.bKuZXg {
   background-color: #fff !important;
   color: black !important;
 }
@@ -197,15 +205,18 @@
   border: 1px solid #e5e7e7;
 }
 .hSFnST,
-.iZlugh {
+.iZlugh,
+.fqDZcL {
   color: black !important;
 }
 .hjKPmy,
-.CXMyy {
+.CXMyy,
+.eLDzjK {
   fill: black !important;
 }
 .fsSeeb,
-.hGkMvb {
+.hGkMvb,
+.gEMbSb {
   color: black !important;
 }
 .bTDxgI {
@@ -213,12 +224,14 @@
 }
 .joKvYL,
 .kWqKKK,
+.kIJjpa,
 .gcjvww {
   background-color: #46065f !important;
   color: #fff !important;
 }
 .joKvYL:hover,
-.kWqKKK:hover {
+.kWqKKK:hover,
+.kIJjpa:hover {
   color: #fff !important;
   background-color: rgb(18, 99, 241) !important;
   border-color: rgb(18, 99, 241) !important;
@@ -226,14 +239,16 @@
 }
 .jRNEBu,
 .fwjcqd,
-.jJOcej {
+.jJOcej,
+.IYzyH {
   background-color: transparent !important;
 }
 .token-amount-input::placeholder {
   color: black !important;
 }
 .fVzdOE,
-.gcuAnX {
+.gcuAnX,
+.VUrNH {
   background-color: #e5e7e7 !important;
   color: #000 !important;
 }
@@ -257,11 +272,13 @@
   background: transparent !important;
 }
 .emvnVi,
-.bQrGOq {
+.bQrGOq,
+.dpsoee {
   color: rgb(7, 22, 45) !important;
 }
 .PZmzo,
-.hGwVBF {
+.hGwVBF,
+.kOVBQR {
   background-color: #46065f !important;
   box-shadow: none !important;
   opacity: 1 !important;
@@ -270,7 +287,8 @@
   background-color: transparent !important;
 }
 .PZmzo:hover,
-.hGwVBF:hover {
+.hGwVBF:hover,
+.kOVBQR:hover {
   background-color: rgb(18, 99, 241) !important;
   box-shadow: none !important;
   opacity: 0.75 !important;
@@ -278,12 +296,14 @@
 .eIbyFk,
 .fMoIlI,
 .hrEUwY,
-.kzkmZo {
+.kzkmZo,
+.kboLGE {
   color: #000 !important;
 }
 .hiRMEQ,
 .leKiKm,
 .fZeXOz,
+.jGckDC,
 .itigIp {
   background-color: #e5e7e7 !important;
   border: 1px solid #e5e7e7 !important;
@@ -291,7 +311,8 @@
   box-shadow: none !important;
 }
 .hiRMEQ::placeholder,
-.fZeXOz::placeholder {
+.fZeXOz::placeholder,
+.jGckDC::placeholder {
   color: #000 !important;
 }
 /* .leKiKm {
@@ -346,14 +367,19 @@
 .icyjVL,
 .bCLZBw:hover,
 .ilrUOc:hover,
+.bCLZBw:hover,
 .hSCCHK:hover,
 .IahEH:hover,
 .fqPRzO:hover,
+.ilDUPL:hover,
 .eIaIqp:hover,
 .djnXaA:hover,
 .cNGgVS:hover,
+.hSCCHK:hover,
 .bCLZBw:hover .fsSeeb,
 .ilrUOc:hover .hGkMvb,
+.hSCCHK:hover .gEMbSb,
+.bCLZBw:hover .gEMbSb,
 .cNGgVS:hover .hGkMvb,
 .hSCCHK:hover .fsSeeb {
   background-color: #e5e7e7 !important;
@@ -449,6 +475,7 @@
 }
 .eSvlCC:hover,
 .gcuAnX:hover,
+.VUrNH:hover,
 .fUsIex:hover {
   background-color: #071731 !important;
   opacity: 1 !important;
@@ -458,10 +485,19 @@
 .gQUrCu:hover,
 .hSTWmr,
 .hSTWmr:hover,
+.BdYgq,
+.BdYgq:hover,
+.cJnpLQ,
+.cJnpLQ:hover,
 .itigIp,
-.itigIp:hover {
+.itigIp:hover,
+.cJnpLQ,
+.cJnpLQ:hover {
   background-color: #e5e7e7 !important;
   color: #000 !important;
+}
+.cJnpLQ {
+  box-shadow: none !important;
 }
 .dMyrsm {
   background-color: #690a74 !important;
@@ -477,7 +513,8 @@
   margin-top: 10px !important;
 }
 .kdxFnu,
-.cWctTA {
+.cWctTA,
+.cOeNNc {
   margin: 10px 20px !important ;
   padding: 20px 40px 0px 0px !important;
 }
@@ -491,4 +528,27 @@
 .foiiQF {
   width: 50px !important;
   margin: 10px 0px !important;
+}
+@media (max-width: 480px) {
+  .fVTnYc {
+    padding: 0 10px !important;
+  }
+}
+.bzzZRT,
+.dZWQlv,
+.iNQawZ,
+.gBGBRU,
+.kWYeBS,
+.blPYIX {
+  background-color: #690a74 !important;
+}
+.iWrzcz:hover,
+.imwGNM:hover,
+.gBGBRU:hover,
+.blPYIX:hover,
+.kWYeBS:hover,
+.iNQawZ:hover,
+.eHiEdh:hover,
+.fbkuZe:hover {
+  background-color: #46065f !important;
 }

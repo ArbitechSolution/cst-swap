@@ -35,12 +35,12 @@ const config: MenuEntry[] = [
   {
     label: 'Game',
     icon: 'TeamBattleIcon',
-    href: 'https://voluble-cascaron-2732b6.netlify.app',
+    href: 'https://lustrous-salmiakki-c35b1e.netlify.app',
   },
   {
     label: 'Game 2',
     icon: 'TeamBattleIcon',
-    href: 'https://profound-naiad-b12d8b.netlify.app',
+    href: 'https://nimble-griffin-d36efd.netlify.app',
   },
   // ,
   // {

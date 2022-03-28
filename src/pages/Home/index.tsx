@@ -310,7 +310,7 @@ const Swap = () => {
                   <div className="defi_price_box">
                     <h1>Coming Soon</h1>
 
-                    <p>$Wireswap Price</p>
+                    <p>$CSTSwap Price</p>
                   </div>
                 </div>
                 <div className="col-md-3">
