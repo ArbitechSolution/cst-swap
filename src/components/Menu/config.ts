@@ -40,7 +40,7 @@ const config: MenuEntry[] = [
   {
     label: 'Game 2',
     icon: 'TeamBattleIcon',
-    href: 'https://bright-scone-26eaf4.netlify.app',
+    href: 'https://profound-naiad-b12d8b.netlify.app',
   },
   // ,
   // {
