@@ -63,7 +63,13 @@
   min-height: 80vh !important;
   /* height: 100vh !important; */
 }
-
+@media (max-width: 480px) {
+  .kCznXV,
+  .fVTnYc
+   {
+    padding: 0 10px !important;
+  }
+}
 body {
   font-family: Kanit, sans-serif !important;
   /* background-image: linear-gradient(to right, #0b1695, #bd27c5); */

@@ -35,12 +35,12 @@ const config: MenuEntry[] = [
   {
     label: 'Game',
     icon: 'TeamBattleIcon',
-    href: 'https://lustrous-salmiakki-c35b1e.netlify.app',
+    href: 'https://www.game.cstswap.finance',
   },
   {
     label: 'Game 2',
     icon: 'TeamBattleIcon',
-    href: 'https://nimble-griffin-d36efd.netlify.app',
+    href: 'https://www.game2.cstswap.finance',
   },
   // ,
   // {

@@ -212,7 +212,10 @@ export default function RemoveLiquidity({
     let methodNames: string[]
     let args: Array<string | string[] | number | boolean>
     // we have approval, use normal remove liquidity
+  // console.log("approval",approval)
+  // console.log("ApprovalState.APPROVED",ApprovalState?.APPROVED)
     if (approval === ApprovalState.APPROVED) {
+    
       // removeLiquidityETH
       if (oneCurrencyIsETH) {
         methodNames = ['removeLiquidityETH', 'removeLiquidityETHSupportingFeeOnTransferTokens']
@@ -242,6 +245,9 @@ export default function RemoveLiquidity({
     // we have a signataure, use permit versions of remove liquidity
     else if (signatureData !== null) {
       // removeLiquidityETHWithPermit
+  console.log("oneCurrencyIsETH",oneCurrencyIsETH)
+  console.log("signatureData",signatureData)
+   
       if (oneCurrencyIsETH) {
         methodNames = ['removeLiquidityETHWithPermit', 'removeLiquidityETHWithPermitSupportingFeeOnTransferTokens']
         args = [
@@ -291,13 +297,15 @@ export default function RemoveLiquidity({
     const indexOfSuccessfulEstimation = safeGasEstimates.findIndex((safeGasEstimate) =>
       BigNumber.isBigNumber(safeGasEstimate)
     )
-
+    console.log("safeGasEstimates",safeGasEstimates)
+    console.log("indexOfSuccessfulEstimation",indexOfSuccessfulEstimation)
     // all estimations failed...
     if (indexOfSuccessfulEstimation === -1) {
       console.error('This transaction would fail. Please contact support.')
     } else {
       const methodName = methodNames[indexOfSuccessfulEstimation]
       const safeGasEstimate = safeGasEstimates[indexOfSuccessfulEstimation]
+
 
       setAttemptingTxn(true)
       await router[methodName](...args, {
