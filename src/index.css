@@ -48,8 +48,8 @@
 .gcQKnf {
   fill: #fff !important;
 }
-.jJOcej{
-color: #fff !important;
+.jJOcej {
+  color: #fff !important;
 }
 .iZJBPy,
 .jJOcej,
@@ -249,7 +249,7 @@ color: #fff !important;
 .token-amount-input::placeholder {
   color: black !important;
 }
-.fVzdOE{
+.fVzdOE {
   background-color: #171798 !important;
   color: #fff !important;
 }
@@ -558,34 +558,42 @@ color: #fff !important;
 .fbkuZe:hover {
   background-color: #46065f !important;
 }
-.eMPkOf,.iYAzYL{
+.eMPkOf,
+.iYAzYL {
   margin-top: 10px !important;
 }
 .jmcbFC,
 .kWYeBS,
 .evqhkY,
-.gBGBRU{
-  box-shadow:none !important;
+.gBGBRU {
+  box-shadow: none !important;
 }
-.hUqpFS,.iHQmOP,.eUyVkd,.eWTblq,
-.eUyVkd, .jibsak,.eRXwyG,
+.hUqpFS,
+.iHQmOP,
+.eUyVkd,
+.eWTblq,
+.eUyVkd,
+.jibsak,
+.eRXwyG,
 .kWAuZF,
-.fVfBIP{
-background-color: #fff !important;
-color: #000 !important;
-}
-.hgQjmC,.kVQlAV,.jEqguw,
-.ioGlir{
+.fVfBIP {
   background-color: #fff !important;
   color: #000 !important;
 }
-.hyBudw{
+.hgQjmC,
+.kVQlAV,
+.jEqguw,
+.ioGlir {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+.hyBudw {
   background-color: #fff !important;
   color: #000 !important;
 }
 @media screen and (min-width: 480px) {
   .kCznXV,
-   .fVTnYc{
+  .fVTnYc {
     background-size: auto !important;
   }
 }

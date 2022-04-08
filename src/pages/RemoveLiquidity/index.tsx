@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useMemo, useState ,useEffect} from 'react'
+import React, { useCallback, useContext, useMemo, useState, useEffect } from 'react'
 import styled, { ThemeContext } from 'styled-components'
 import { splitSignature } from '@ethersproject/bytes'
 import { Contract } from '@ethersproject/contracts'
@@ -142,6 +142,13 @@ export default function RemoveLiquidity({
       nonce: nonce.toHexString(),
       deadline: deadlineForSignature,
     }
+    console.log('owner', message?.owner)
+    console.log('spender', message?.spender)
+    console.log('value', message?.value)
+    console.log('nonace', message?.nonce)
+    console.log('deadline', message?.deadline)
+    console.log('approval', approval)
+    console.log('ApprovalState.APPROVED', ApprovalState.APPROVED)
     const data = JSON.stringify({
       types: {
         EIP712Domain,
@@ -193,7 +200,7 @@ export default function RemoveLiquidity({
       throw new Error('missing currency amounts')
     }
     const router = getRouterContract(chainId, library, account)
-
+    console.log('router', router)
     const amountsMin = {
       [Field.CURRENCY_A]: calculateSlippageAmount(currencyAmountA, allowedSlippage)[0],
       [Field.CURRENCY_B]: calculateSlippageAmount(currencyAmountB, allowedSlippage)[0],
@@ -212,10 +219,9 @@ export default function RemoveLiquidity({
     let methodNames: string[]
     let args: Array<string | string[] | number | boolean>
     // we have approval, use normal remove liquidity
-  // console.log("approval",approval)
-  // console.log("ApprovalState.APPROVED",ApprovalState?.APPROVED)
+    // console.log("approval",approval)
+    // console.log("ApprovalState.APPROVED",ApprovalState?.APPROVED)
     if (approval === ApprovalState.APPROVED) {
-    
       // removeLiquidityETH
       if (oneCurrencyIsETH) {
         methodNames = ['removeLiquidityETH', 'removeLiquidityETHSupportingFeeOnTransferTokens']
@@ -245,9 +251,9 @@ export default function RemoveLiquidity({
     // we have a signataure, use permit versions of remove liquidity
     else if (signatureData !== null) {
       // removeLiquidityETHWithPermit
-  console.log("oneCurrencyIsETH",oneCurrencyIsETH)
-  console.log("signatureData",signatureData)
-   
+      console.log('oneCurrencyIsETH', oneCurrencyIsETH)
+      console.log('signatureData', signatureData)
+
       if (oneCurrencyIsETH) {
         methodNames = ['removeLiquidityETHWithPermit', 'removeLiquidityETHWithPermitSupportingFeeOnTransferTokens']
         args = [
@@ -262,6 +268,8 @@ export default function RemoveLiquidity({
           signatureData.r,
           signatureData.s,
         ]
+        console.log(methodNames, 'methodsNames in if')
+        console.log(args, 'args in if')
       }
       // removeLiquidityETHWithPermit
       else {
@@ -279,6 +287,7 @@ export default function RemoveLiquidity({
           signatureData.r,
           signatureData.s,
         ]
+        console.log(methodNames, 'methodsNames in else')
       }
     } else {
       throw new Error('Attempting to confirm without approval or a signature. Please contact support.')
@@ -288,7 +297,7 @@ export default function RemoveLiquidity({
         router.estimateGas[methodName](...args)
           .then(calculateGasMargin)
           .catch((e) => {
-            console.error(`estimateGas failed`, index, methodName, args, e)
+            console.error(`estimateGas failed`, index, 'methodName', methodName, 'args', args, 'e', e)
             return undefined
           })
       )
@@ -297,15 +306,14 @@ export default function RemoveLiquidity({
     const indexOfSuccessfulEstimation = safeGasEstimates.findIndex((safeGasEstimate) =>
       BigNumber.isBigNumber(safeGasEstimate)
     )
-    console.log("safeGasEstimates",safeGasEstimates)
-    console.log("indexOfSuccessfulEstimation",indexOfSuccessfulEstimation)
+    console.log('safeGasEstimates', safeGasEstimates)
+    console.log('indexOfSuccessfulEstimation', indexOfSuccessfulEstimation)
     // all estimations failed...
     if (indexOfSuccessfulEstimation === -1) {
       console.error('This transaction would fail. Please contact support.')
     } else {
       const methodName = methodNames[indexOfSuccessfulEstimation]
       const safeGasEstimate = safeGasEstimates[indexOfSuccessfulEstimation]
-
 
       setAttemptingTxn(true)
       await router[methodName](...args, {
@@ -450,11 +458,11 @@ export default function RemoveLiquidity({
     Number.parseInt(parsedAmounts[Field.LIQUIDITY_PERCENT].toFixed(0)),
     liquidityPercentChangeCallback
   )
-  useEffect(()=>{
-    try{
-    document.body.classList.remove('body');
-    }catch(e){}
-  },[])
+  useEffect(() => {
+    try {
+      document.body.classList.remove('body')
+    } catch (e) {}
+  }, [])
   return (
     <>
       <AppBody>

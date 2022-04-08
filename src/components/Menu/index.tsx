@@ -23,7 +23,7 @@ const Menu: React.FC = (props) => {
   // ) : undefined
   const profile = useGetLocalProfile()
   const loc = useLocation()
-  console.log('loc', loc)
+  console.log('loc in menu', loc)
   const getUrl = () => {
     if (loc?.pathname?.includes('/swap')|| loc?.pathname?.includes('/find')|| 
     loc?.pathname?.includes('/pool')||
